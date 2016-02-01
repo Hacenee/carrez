@@ -1,0 +1,16 @@
+
+
+{
+	"title": "le bon coin schemahema",
+	"type": "object",
+	
+	"properties": {
+		"Town":"string" ,
+		"price":"string" ,
+		"Area": "string",
+		"zipcode":"string",
+		"nbroom": "string",
+		"type":"string"
+	},
+	
+}
