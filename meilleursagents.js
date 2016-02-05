@@ -28,10 +28,10 @@ jsonmeilleursagents.properties.avgpricehouse  = avghouse;
 jsonmeilleursagents.properties.avgpricerental = avgrental;
 //comparaison
 
-var pricelbc = jsonleboncoin.properties.price
-pricelbc = pricelbc.toString().replace(' ','');
-var arealbc = parseInt(jsonleboncoin.properties.Area);
-pricelbc = parseInt(pricelbc);
+    var pricelbc = jsonleboncoin.properties.price
+    pricelbc = pricelbc.toString().replace(' ','');
+    var arealbc = parseInt(jsonleboncoin.properties.Area);
+    pricelbc = parseInt(pricelbc);
 
 var pricemeterlbc = pricelbc/arealbc;
 var type = jsonleboncoin.properties.type;

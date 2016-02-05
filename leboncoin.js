@@ -8,7 +8,10 @@ var json = require('./leboncoinshema');
 app.get('/scrape', function(req, res){
 
 //url = 'http://www.leboncoin.fr/ventes_immobilieres/915700197.htm?ca=12_s';
-url = 'http://www.leboncoin.fr/ventes_immobilieres/888865422.htm?ca=12_s';
+
+url = 'http://www.leboncoin.fr/ventes_immobilieres/920350882.htm?ca=12_s';
+
+//url = 'http://www.leboncoin.fr/ventes_immobilieres/888865422.htm?ca=12_s';
 request(url, function(error, response, html){
     if(!error){
         var $ = cheerio.load(html);
@@ -20,9 +23,21 @@ request(url, function(error, response, html){
 	zipcode = $("[itemprop='postalCode']").text();
 	var datas = $("[class = 'lbcParams criterias']>table > tr > td");
 	
+	if((datas[0].children[0].data == "Maison")||(datas[0].children[0].data == "Appartement")){
    type = datas[0].children[0].data;
    nbpieces = datas[1].children[0].data;
    surface = datas[2].children[0].data;
+     }
+	 
+	 else{
+	 
+	  type = datas[1].children[0].data;
+   nbpieces = datas[2].children[0].data;
+   surface = datas[3].children[0].data;
+	 
+	 
+	 }
+  
   
    json.properties.price = price;
    json.properties.Town = town;
@@ -35,16 +50,20 @@ request(url, function(error, response, html){
 }
 
 
-fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
+fs.writeFile('leboncoininfos.json', JSON.stringify(json, null, 4), function(err){
 
     console.log('File successfully written! - Check your project directory for the output.json file');
 
 });
 
+
+
 // Finally, we'll just send out a message to the browser reminding you that this app does not have a UI.
 res.send('Check your consolee!');
 
-} )}) ;
+})
+
+} ) ;
 
 
 
