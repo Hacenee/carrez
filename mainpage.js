@@ -10,12 +10,14 @@ var jsonmeilleursagents =  require('./meilleursagentsshema');
 var lbcinfos = require('./leboncoininfos');
 var ma = require('./modulemeilleursagents');
 var lbc = require('./moduleboncoin');
+app.use(express.static(__dirname + '/views/mainpage.css'));
+
 
 app.get('/myserver', function(req, res){
-//var etagenum = 12;
-//res.render('chambre.ejs', {etage: etagenum});
 
-res.sendFile( __dirname  + '/page.html');
+res.render('index.ejs');
+
+//res.sendFile( __dirname  + '/mainpage.html');
 
 
 
@@ -28,6 +30,13 @@ app.post('/myserver', function(req, res) {
  
   var deal = ma.getMa();
  console.log(deal);
+ if(deal  == true){
+ res.send('good deal');
+ }
+ 
+ if(deal  == false){
+ res.send('bad deal');
+ }
  
 });
 

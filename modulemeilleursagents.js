@@ -52,8 +52,8 @@ pricemeterMa = jsonmeilleursagents.properties.avgpricehouse;
 break;
 //location pas fait -> soulève un pb : les locations sont quand meme des appartements ou maison dans type
 }
-//console.log("price/m2 LeBonCoin : " + pricemeterlbc );
-   // console.log("price/m2 MeilleursAgents : " + pricemeterMa );
+console.log("price/m2 LeBonCoin : " + pricemeterlbc );
+   console.log("price/m2 MeilleursAgents : " + pricemeterMa );
     if(pricemeterlbc <= pricemeterMa){
 //console.log("GOOD DEAL ;)");
  jsonleboncoin.properties.deal = true;              
