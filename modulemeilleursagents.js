@@ -1,3 +1,9 @@
+
+
+
+
+var getMa = function(){
+
 var express = require('express');
 var fs = require('fs');
 var request = require('request');
@@ -8,7 +14,7 @@ var jsonmeilleursagents =  require('./meilleursagentsshema');
 var lbcinfos = require('./leboncoininfos');
 
 
-app.get('/computedeal', function(req, res){
+
 //file loading
   var body = fs.readFileSync('./rosny.html', 'utf8');
   var $ = cheerio.load(body);
@@ -46,33 +52,31 @@ pricemeterMa = jsonmeilleursagents.properties.avgpricehouse;
 break;
 //location pas fait -> soulève un pb : les locations sont quand meme des appartements ou maison dans type
 }
-console.log("price/m2 LeBonCoin : " + pricemeterlbc );
-    console.log("price/m2 MeilleursAgents : " + pricemeterMa );
+//console.log("price/m2 LeBonCoin : " + pricemeterlbc );
+   // console.log("price/m2 MeilleursAgents : " + pricemeterMa );
     if(pricemeterlbc <= pricemeterMa){
-console.log("GOOD DEAL ;)");
+//console.log("GOOD DEAL ;)");
  jsonleboncoin.properties.deal = true;              
-									 
+//console.log(jsonleboncoin.properties.deal);								 
 									 }
      if(pricemeterlbc > pricemeterMa){
- console.log("Bad deal :(");
+ //console.log("Bad deal :(");
   jsonleboncoin.properties.deal = false;
                                      }
+									 
 fs.writeFile('meilleursagentsinfos.json', JSON.stringify(jsonmeilleursagents, null, 4), function(err)
 {
-console.log('Writing went good ! Check outputMA.json in your folder');
+
 });
 
 fs.writeFile('leboncoininfos.json', JSON.stringify(jsonleboncoin, null, 4), function(err)
 {
-console.log('Writing went good ! Check outputMA.json in your folder');
+
 });
 
+return  jsonleboncoin.properties.deal;
 
-res.send('Check your console!');
-}) ;
+}
 
+exports.getMa = getMa;
 
-
-app.listen('8080')
-console.log('we are  evaluating the deal');
-exports = module.exports = app;
