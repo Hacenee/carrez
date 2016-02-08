@@ -2,12 +2,12 @@
     "title": "le bon coin schemahema",
     "type": "object",
     "properties": {
-        "Town": "Ronchin",
-        "price": "140 000 €",
-        "Area": "52 m",
-        "zipcode": "59790",
-        "nbroom": "3",
-        "type": "Appartement",
+        "Town": "Clapiers",
+        "price": "585 000 €",
+        "Area": "170 m",
+        "zipcode": "34830",
+        "nbroom": "5",
+        "type": "Maison",
         "url": "string",
         "deal": "boolean"
     }

@@ -4,20 +4,20 @@ var bodyParser = require("body-parser");
 var request = require('request');
 var cheerio = require('cheerio');
 var app     = express();
-app.use(bodyParser.urlencoded({ extended: true }));
+
 var jsonleboncoin = require('./leboncoininfos');
 var jsonmeilleursagents =  require('./meilleursagentsshema');
 var lbcinfos = require('./leboncoininfos');
 var ma = require('./modulemeilleursagents');
 var lbc = require('./moduleboncoin');
-app.use(express.static(__dirname + '/views/mainpage.css'));
-
+app.use(express.static('views'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/myserver', function(req, res){
 
-res.render('index.ejs');
+//res.render('./views/mainpage');
 
-//res.sendFile( __dirname  + '/mainpage.html');
+res.sendFile( __dirname  + '/views/mainpage.html');
 
 
 
