@@ -2,11 +2,11 @@
     "title": "le bon coin schemahema",
     "type": "object",
     "properties": {
-        "Town": "Clapiers",
-        "price": "585 000 €",
-        "Area": "170 m",
-        "zipcode": "34830",
-        "nbroom": "5",
+        "Town": "L�ge-Cap-Ferret",
+        "price": "940 000 €",
+        "Area": "86 m",
+        "zipcode": "33970",
+        "nbroom": "3",
         "type": "Maison",
         "url": "string",
         "deal": "boolean"

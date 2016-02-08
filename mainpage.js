@@ -31,11 +31,13 @@ app.post('/myserver', function(req, res) {
   var deal = ma.getMa();
  console.log(deal);
  if(deal  == true){
- res.send('good deal');
+ //res.send('good deal');
+ res.sendFile( __dirname  + '/views/goodchoice.html');
  }
  
  if(deal  == false){
- res.send('bad deal');
+ //res.send('bad deal');
+ res.sendFile( __dirname  + '/views/badchoice.html');
  }
  
 });
