@@ -2,12 +2,12 @@
     "title": "le bon coin schemahema",
     "type": "object",
     "properties": {
-        "Town": "Clapiers",
-        "price": "585 000 €",
-        "Area": "170 m",
-        "zipcode": "34830",
+        "Town": "Rosny-sous-Bois",
+        "price": "222 680 €",
+        "Area": "101 m",
+        "zipcode": "93110",
         "nbroom": "5",
-        "type": "Maison",
+        "type": "Appartement",
         "url": "string",
         "deal": "boolean"
     }
