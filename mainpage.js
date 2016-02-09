@@ -49,5 +49,5 @@ app.post('/post.html', function(req, res) {
 
 
 app.listen('8080')
-console.log('server is coming');
+console.log('server is coming \n go to the link http://localhost:8080/myserver ');
 
