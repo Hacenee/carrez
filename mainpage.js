@@ -49,5 +49,5 @@ app.post('/post.html', function(req, res) {
 
 
 app.listen('8080')
-console.log('the server is coming');
+console.log('server is coming');
 

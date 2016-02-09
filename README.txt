@@ -8,4 +8,4 @@ In  order to run the application we must :
 - go to the link : localhost:8080/myserver
 
 
-- There is a problem , we have to restart the server for each url because the file will not be considered after being changed more than once.
+- There is a problem , we have to restart the server (file mainpage) with the console for each url because the file will not be considered after being changed more than once.
