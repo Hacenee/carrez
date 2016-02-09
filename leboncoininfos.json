@@ -2,11 +2,11 @@
     "title": "le bon coin schemahema",
     "type": "object",
     "properties": {
-        "Town": "Rosny-sous-Bois",
-        "price": "222 680 €",
-        "Area": "101 m",
-        "zipcode": "93110",
-        "nbroom": "5",
+        "Town": "Levallois-Perret",
+        "price": "275 000 €",
+        "Area": "32 m",
+        "zipcode": "92300",
+        "nbroom": "2",
         "type": "Appartement",
         "url": "string",
         "deal": "boolean"

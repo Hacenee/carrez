@@ -24,12 +24,13 @@ res.sendFile( __dirname  + '/views/mainpage.html');
 
 }) ;
 
-app.post('/myserver', function(req, res) {
+app.post('/post.html', function(req, res) {
   var url = req.body.url; 
   lbc.getlbc(url);
  
   var deal = ma.getMa();
- console.log(deal);
+ console.log(url);
+ 
  if(deal  == true){
  //res.send('good deal');
  res.sendFile( __dirname  + '/views/goodchoice.html');
